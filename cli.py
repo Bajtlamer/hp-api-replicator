@@ -39,6 +39,16 @@ def create_user(username, password):
     click.echo(f"JWT Token for '{username}': {token}")
 
 @cli.command()
+@click.option("--verbose", is_flag=True, help="Show hashed passwords")
+def list_users(verbose: bool = False):
+    users = load_users()
+    if not users:
+        click.echo("No users found.")
+        return
+    for u, data in users.items():
+        click.echo(u if not verbose else f"{u}: {data['password']}")
+
+@cli.command()
 @click.argument("username")
 def delete_user(username):
     users = load_users()
@@ -51,4 +61,20 @@ def delete_user(username):
     click.echo(f"User '{username}' deleted successfully.")
 
 if __name__ == "__main__":
+    cli()
+
+if __name__ == "__main__":
+    cli()
+
+@cli.command()
+@click.option("--verbose", is_flag=True, help="Show hashed passwords")
+def list_users(verbose: bool = False):
+    users = load_users()
+    if not users:
+        click.echo("No users found.")
+        return
+    for u, data in users.items():
+        click.echo(u if not verbose else f"{u} -> {data['password']}")
+
+
     cli()

@@ -7,7 +7,7 @@ from fastapi import Depends, HTTPException, status
 from config import settings
 
 # Password hashing
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+pwd_context = CryptContext(schemes=["pbkdf2_sha256"], deprecated="auto")
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token") # We won't implement a /token endpoint for this task, but it's good practice to define it
 

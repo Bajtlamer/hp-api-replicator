@@ -1,1 +1,8 @@
-{}
+{
+    "edv": {
+        "password": "$pbkdf2-sha256$29000$MObcW6t1zvn/P8c4h7CWsg$jO27kre8URJnkl5UYT6l9n06nK8ZZYQGMOTppwEEgiM"
+    },
+    "tester": {
+        "password": "$pbkdf2-sha256$29000$6R1DiDEGgDBGaE0JAUBozQ$8ZzTA.DGYVRkjveKH5HvU7.XCLRks1bBWcRSGTjvmbY"
+    }
+}
