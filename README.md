@@ -82,6 +82,7 @@ cat logs/replication.log
 ### CLI Commands
 
 *   **`python cli.py create-user <username>`**: Creates a new user and generates a JWT token.
+*   **`python cli.py list-users [--verbose]`**: Lists all users. Use `--verbose` to see hashed passwords.
 *   **`python cli.py delete-user <username>`**: Deletes an existing user.
 
 ## Configuration
